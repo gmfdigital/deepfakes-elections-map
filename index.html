@@ -84,7 +84,7 @@
 
 
 		map.addControl(new mapboxgl.AttributionControl({
-			customAttribution: 'Design: <b><a target="_blank" href="https://ericrannestad.com/Design"> Eric Rannestad Studio</a></b>'
+			customAttribution: 'Design: <b><a target="_blank" href="https://ericrannestad.com/Design"> Eric Rannestad Studio</a></b> and Brooke Tanner'
 		}));
 
     map.on('load', () => {
@@ -97,8 +97,8 @@
 
 			map.addSource('semiconductors', {
 			type: 'geojson',
-			// Use a URL for the value for the `data` property.
-			data: 'https://api.mapbox.com/datasets/v1/gmfdigital/clfkazscv2lsb2aqh6j1qdlpm/features?access_token=pk.eyJ1IjoiZ21mZGlnaXRhbCIsImEiOiJjbGZrN21nYm4wODcxNDFuejh2ZTlicWhlIn0.MpmGWQOJ15s5u9-MY7zIUg',
+			// Use a URL for the value for the `data` property. 
+			data: 'https://api.mapbox.com/datasets/v1/gmfdigital/clull8f2t0kgj1upiu92ohscv/features?access_token=pk.eyJ1IjoiZ21mZGlnaXRhbCIsImEiOiJjbGZrN21nYm4wODcxNDFuejh2ZTlicWhlIn0.MpmGWQOJ15s5u9-MY7zIUg',
       'generateId': true, //This ensures that all features have unique IDs           
 			'cluster': true,
 			'clusterRadius' : 16,
