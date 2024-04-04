@@ -2,28 +2,28 @@ var settings = {
 	"mapSettings" : {
 		"categories": [
 			{
-				"categoryField": "New Investment Announced",
-				"label": "New Investment Announced",
+				"categoryField": "Audio Deepfake",
+				"label": "Audio Deepfake",
 				"color": "hsl(223, 83%, 54%)"
 			},
 			{
-				"categoryField": "Broke Ground",
-				"label": "Broke Ground",
+				"categoryField": "Visual Deepfake",
+				"label": "Visual Deepfake",
 				"color": "hsl(298, 85%, 57%)"
 			},
 			{
-				"categoryField": "Facility Opened",
-				"label": "Facility Opened",
+				"categoryField": "Video Deepfake",
+				"label": "Video Deepfake",
 				"color": "hsl(0, 58%, 56%)"
 			},
 			{
-				"categoryField": "Government Investment Announced",
-				"label": "Government Investment Announced",
+				"categoryField": "Generative Text",
+				"label": "Generative Text",
 				"color": "hsl(170, 97%, 40%)"
 			},
 			{
-				"categoryField": "Considering New Investment/Expansion",
-				"label": "Considering New Investment/Expansion",
+				"categoryField": "Other",
+				"label": "Other",
 				"color": "hsl(42, 79%, 60%)"
 			}
 		]
