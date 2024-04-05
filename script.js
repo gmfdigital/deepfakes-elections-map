@@ -221,7 +221,7 @@ const hoverpopup = new mapboxgl.Popup({
 
 function createHoverPopup(f) { // create popup
 	  var popupString = "<div class='feature'>";
-  	popupString += "<p class='title'>" + f.properties.title + "</p>";
+  	popupString += "<p class='heading'>" + f.properties.heading + "</p>";
   	popupString += "</div>";
 		hoverpopup.setLngLat(f.geometry.coordinates);
 		hoverpopup.setHTML(popupString);
@@ -239,7 +239,7 @@ const selectedPopup = new mapboxgl.Popup({
 
 function createSelectedPopup(f) { // create popup
 	  var popupString = "<div class='feature'>";
-  	popupString += "<p class='title'>" + f.properties.title + "</p>";
+  	popupString += "<p class='heading'>" + f.properties.heading + "</p>";
   	popupString += "</div>";
 		selectedPopup.setLngLat(f.geometry.coordinates);
 		selectedPopup.setHTML(popupString);
@@ -355,7 +355,7 @@ map.on('mouseenter', 'clusters-circle-id', (event) => {
 		  var popupString = "";
 		  clusterFeatures.forEach(feature => {
 		  	popupString += "<div class='feature'>";
-		  	popupString += "<p class='title'>" + feature.properties.title + "</p>";
+		  	popupString += "<p class='heading'>" + feature.properties.heading + "</p>";
 		  	popupString += "</div>";
 		  })
 
