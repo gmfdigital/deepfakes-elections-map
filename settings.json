@@ -20,11 +20,6 @@ var settings = {
 				"categoryField": "Generative Text",
 				"label": "Generative Text",
 				"color": "hsl(170, 97%, 40%)"
-			},
-			{
-				"categoryField": "Other",
-				"label": "Other",
-				"color": "hsl(42, 79%, 60%)"
 			}
 		]
 	}
