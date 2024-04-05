@@ -310,7 +310,7 @@ a:hover{
 /*  border-bottom: white solid 8px;*/
 }
 
-.popup-header .title .firm{
+.popup-header .title .title{
   color: var(--theme-red);
   margin-top: 0px;
   margin-bottom: 8px;
