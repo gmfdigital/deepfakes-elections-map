@@ -1,6 +1,6 @@
 var stylesheet = {
     "version": 8,
-    "name": "GMF - Semiconductors",
+    "name": "GMF - AI Map",
     "metadata": {
         "mapbox:type": "default",
         "mapbox:origin": "monochrome-dark-v1",
