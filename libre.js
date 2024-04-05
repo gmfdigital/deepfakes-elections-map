@@ -131,7 +131,7 @@ function fullPopup(f, task) {
 		    				</div>
 		    	 		</div>
 		    	 		<div class="title">
-		    	 			${(f.properties.title) ? '<h2 class="title">' + f.properties.title + '</h2>': `` }
+		    	 			${(f.properties.heading) ? '<h2 class="heading">' + f.properties.heading + '</h2>': `` }
 		    	 			${(f.properties.event) ? '<h4 class="event">' + f.properties.event + '</h4>': `` }
 		    	 		</div>
 		    	 	</div>
@@ -219,7 +219,7 @@ const hoverpopup = new maplibregl.Popup({
 
 function createHoverPopup(f) { // create popup
 	  var popupString = "<div class='feature'>";
-  	popupString += "<p class='title'>" + f.properties.title + "</p>";
+  	popupString += "<p class='heading'>" + f.properties.heading + "</p>";
   	popupString += "</div>";
 		hoverpopup.setLngLat(f.geometry.coordinates);
 		hoverpopup.setHTML(popupString);
@@ -237,7 +237,7 @@ const selectedPopup = new maplibregl.Popup({
 
 function createSelectedPopup(f) { // create popup
 	  var popupString = "<div class='feature'>";
-  	popupString += "<p class='title'>" + f.properties.title + "</p>";
+  	popupString += "<p class='heading'>" + f.properties.heading + "</p>";
   	popupString += "</div>";
 		selectedPopup.setLngLat(f.geometry.coordinates);
 		selectedPopup.setHTML(popupString);
