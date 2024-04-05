@@ -133,7 +133,7 @@ function fullPopup(f, task) {
 		    				</div>
 		    	 		</div>
 		    	 		<div class="title">
-		    	 			${(f.properties.title) ? '<h2 class="title">' + f.properties.title + '</h2>': `` }
+		    	 			${(f.properties.heading) ? '<h2 class="heading">' + f.properties.heading + '</h2>': `` }
 		    	 			${(f.properties.event) ? '<h4 class="event">' + f.properties.event + '</h4>': `` }
 		    	 		</div>
 		    	 	</div>
