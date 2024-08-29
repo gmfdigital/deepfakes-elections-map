@@ -376,14 +376,4 @@ map.on('load', () => {
 map.on('move', () => { 
 	checkContinent();
 });
- //Panning around
-document.getElementById('panButton').addEventListener('click', function() {
-    var bounds = [
-        [-180, -90], // Southwest coordinates
-        [180, 90]    // Northeast coordinates
-    ];
-    map.fitBounds(bounds, {
-        padding: {top: 50, bottom: 50, left: 50, right: 50},
-        duration: 5000 // Duration in milliseconds
-    });
-});
+
