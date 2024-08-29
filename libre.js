@@ -5,7 +5,7 @@ var USAbbox = [[-125, 51], [-68,20 ]];
 var EUbbox = [[-12, 61], [44,30 ]];
 var legend = document.querySelector(".legend"); //LIBRE
 var categoryContainer = document.querySelector(".category-container"); //LIBRE
-map.changingContinent = false;
+map.changingContinent = false; 
 
 unitedStatesToggle.addEventListener("click", function(){
 	toggleClass(unitedStatesToggle, europeToggle, "clicked");
