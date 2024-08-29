@@ -2,7 +2,7 @@ var settings = {
 	"mapSettings" : {
 		"categories": [
 			{
-				"categoryField": "Audio Deepfake",
+				"categoryField": "Altered Audio",
 				"label": "Altered Audio",
 				"color": "hsl(223, 83%, 54%)"
 			},
