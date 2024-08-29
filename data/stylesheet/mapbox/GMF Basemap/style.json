@@ -1,6 +1,6 @@
 var stylesheet = {
     "version": 8,
-    "name": "GMF - AI Map",
+    "name": "GMF - Deepfakes in Global Elections Map",
     "metadata": {
         "mapbox:type": "default",
         "mapbox:origin": "monochrome-dark-v1",
