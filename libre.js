@@ -374,28 +374,33 @@ map.on('move', () => {
 
 
 document.getElementById('pan-button').addEventListener('click', () => {
-        let currentLng = 0;
-        const panSpeed = 0.1; // Adjust speed as needed
+        const panCoordinates = [
+          [0, 0], // Starting point
+          [90, 0], // East
+          [180, 0], // Opposite side of the globe
+          [-90, 0], // West
+          [0, 0] // Back to starting point
+        ];
 
-        function panAroundGlobe() {
-          currentLng += panSpeed;
-          if (currentLng > 180) {
-            currentLng = -180;
+        let index = 0;
+
+        function panToNextCoordinate() {
+          if (index < panCoordinates.length) {
+            map.flyTo({
+              center: panCoordinates[index],
+              zoom: 2,
+              speed: 0.5, // Adjust speed as needed
+              curve: 1,
+              easing(t) {
+                return t;
+              },
+              essential: true
+            });
+
+            index++;
+            setTimeout(panToNextCoordinate, 0.01); // Adjust delay as needed
           }
-
-          map.easeTo({
-            center: [currentLng, 0],
-            zoom: 2,
-            speed: 0.5, // Adjust speed as needed
-            curve: 1,
-            easing(t) {
-              return t;
-            },
-            essential: true
-          });
-
-          requestAnimationFrame(panAroundGlobe);
         }
 
-        panAroundGlobe();
+        panToNextCoordinate();
       });
