@@ -88,7 +88,7 @@ body {
   text-decoration: underline;
 }
 
-/*.continent-toggle#united-states {
+.continent-toggle#united-states {
     padding: .5em .75em .5em 1em;
 }
 .continent-toggle#europe {
@@ -98,7 +98,7 @@ body {
 .continent-toggle.active {
   color: var(--theme-red);
   background: white;
-} */
+} 
 
 header {
   pointer-events: none;
