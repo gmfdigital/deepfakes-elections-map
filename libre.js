@@ -1,9 +1,8 @@
-
 var continentToggleContainer = document.querySelector(".continent-toggle-container");
 var unitedStatesToggle = document.querySelector("#united-states");
 var europeToggle = document.querySelector("#europe");
 var USAbbox = [[-125, 51], [-68,20 ]];
-var EUbbox = [[-12, 61], [44,30 ]]; */
+var EUbbox = [[-12, 61], [44,30 ]];
 var legend = document.querySelector(".legend"); //LIBRE
 var categoryContainer = document.querySelector(".category-container"); //LIBRE
 map.changingContinent = false; 
