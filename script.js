@@ -395,33 +395,28 @@ map.on('move', () => {
 //Button
 
 document.getElementById('pan-button').addEventListener('click', () => {
-        const panCoordinates = [
-          [0, 0], // Starting point
-          [90, 0], // East
-          [180, 0], // Opposite side of the globe
-          [-90, 0], // West
-          [0, 0] // Back to starting point
-        ];
+        let currentLng = 0;
+        const panSpeed = 0.1; // Adjust speed as needed
 
-        let index = 0;
-
-        function panToNextCoordinate() {
-          if (index < panCoordinates.length) {
-            map.flyTo({
-              center: panCoordinates[index],
-              zoom: 2,
-              speed: 0.5, // Adjust speed as needed
-              curve: 1,
-              easing(t) {
-                return t;
-              },
-              essential: true
-            });
-
-            index++;
-            setTimeout(panToNextCoordinate, 5000); // Adjust delay as needed
+        function panAroundGlobe() {
+          currentLng += panSpeed;
+          if (currentLng > 180) {
+            currentLng = -180;
           }
+
+          map.easeTo({
+            center: [currentLng, 0],
+            zoom: 2,
+            speed: 0.1, // Adjust speed as needed
+            curve: 1,
+            easing(t) {
+              return t;
+            },
+            essential: true
+          });
+
+          requestAnimationFrame(panAroundGlobe);
         }
 
-        panToNextCoordinate();
+        panAroundGlobe();
       });
