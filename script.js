@@ -5,12 +5,6 @@ var USAbbox = [[-125, 51], [-68,20 ]];
 var EUbbox = [[-12, 61], [44,30 ]];
 var legend = document.querySelector(".legend"); 
 var categoryContainer = document.querySelector(".category-container"); 
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-98.5795, 39.8283], // Starting position [lng, lat]
-    zoom: 3
-});
 
 map.changingContinent = false;
 
