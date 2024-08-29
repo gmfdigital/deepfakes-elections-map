@@ -6,6 +6,12 @@ var EUbbox = [[-12, 61], [44,30 ]];
 var legend = document.querySelector(".legend"); //LIBRE
 var categoryContainer = document.querySelector(".category-container"); //LIBRE
 map.changingContinent = false;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-98.5795, 39.8283], // Starting position [lng, lat]
+    zoom: 3
+});
 
 unitedStatesToggle.addEventListener("click", function(){
 	toggleClass(unitedStatesToggle, europeToggle, "clicked");
@@ -370,4 +376,14 @@ map.on('load', () => {
 map.on('move', () => { 
 	checkContinent();
 });
-
+ //Panning around
+document.getElementById('panButton').addEventListener('click', function() {
+    var bounds = [
+        [-180, -90], // Southwest coordinates
+        [180, 90]    // Northeast coordinates
+    ];
+    map.fitBounds(bounds, {
+        padding: {top: 50, bottom: 50, left: 50, right: 50},
+        duration: 5000 // Duration in milliseconds
+    });
+});
