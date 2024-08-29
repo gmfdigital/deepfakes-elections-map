@@ -268,7 +268,23 @@ a:hover{
   width: 11px;
 }
 
+/*****************************/
+/*********** Pan Around **********/
 
+.panaround {
+  position: absolute;
+    left: 40px;
+    z-index: 1;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.panButton:hover {
+    background: #1e88e5;
+}
 
 /*****************************/
 /*********** POPUP ***********/
