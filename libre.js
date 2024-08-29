@@ -390,7 +390,7 @@ document.getElementById('pan-button').addEventListener('click', () => {
       map.flyTo({
         center: panCoordinates[index],
         zoom: 2,
-        speed: 0.5, // Adjust speed as needed
+        speed: 2, // Adjust speed as needed
         curve: 1,
         easing(t) {
           return t;
@@ -400,7 +400,7 @@ document.getElementById('pan-button').addEventListener('click', () => {
 
       index++;
       if (index < panCoordinates.length) {
-        setTimeout(panToNextCoordinate, 5000); // Adjust delay as needed
+        setTimeout(panToNextCoordinate, .01); // Adjust delay as needed
       }
     }
   }
