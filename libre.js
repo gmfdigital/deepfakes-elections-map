@@ -388,16 +388,6 @@ document.getElementById('pan-button').addEventListener('click', () => {
   function panToNextCoordinate() {
     if (index < panCoordinates.length) {
       map.flyTo({
-        center: panCoordinates[-index],
-        zoom: 2,
-        speed: 0.5, // Adjust speed as needed
-        curve: 1,
-        easing(t) {
-          return t;
-        },
-        essential: true
-      });
-	    map.flyTo({
         center: panCoordinates[index],
         zoom: 2,
         speed: 0.5, // Adjust speed as needed
