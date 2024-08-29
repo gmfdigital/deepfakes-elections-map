@@ -420,6 +420,22 @@ li.source {
   font-weight: 600;
 }
 
+.pan-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: var(--theme-red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.pan-button:hover {
+  background-color: var(--theme-blue);
+}
 
 /*************************************/
 /*********** MEDIA QUERIES ***********/
