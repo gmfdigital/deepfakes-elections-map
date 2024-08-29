@@ -392,7 +392,7 @@ map.on('move', () => {
 	checkContinent();
 });
 
-//Button
+//Button 2
 
 document.getElementById('pan-button').addEventListener('click', () => {
         let currentLng = 0;
