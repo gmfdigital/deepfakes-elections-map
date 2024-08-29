@@ -6,12 +6,6 @@ var EUbbox = [[-12, 61], [44,30 ]];
 var legend = document.querySelector(".legend"); //LIBRE
 var categoryContainer = document.querySelector(".category-container"); //LIBRE
 map.changingContinent = false;
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-98.5795, 39.8283], // Starting position [lng, lat]
-    zoom: 3
-});
 
 unitedStatesToggle.addEventListener("click", function(){
 	toggleClass(unitedStatesToggle, europeToggle, "clicked");
