@@ -407,7 +407,7 @@ document.getElementById('pan-button').addEventListener('click', () => {
           map.easeTo({
             center: [currentLng, 0],
             zoom: 2,
-            speed: 0.1, // Adjust speed as needed
+            speed: 0.5, // Adjust speed as needed
             curve: 1,
             easing(t) {
               return t;
