@@ -373,22 +373,21 @@ map.on('move', () => {
 //Button
 
 
+
 document.getElementById('pan-button').addEventListener('click', () => {
   const startCenter = map.getCenter();
-  const panCoordinates = [
-    [startCenter.lng, startCenter.lat], // Starting point
-    [startCenter.lng + 90, startCenter.lat], // 90 degrees east
-    [startCenter.lng + 180, startCenter.lat], // 180 degrees opposite
-    [startCenter.lng - 90, startCenter.lat], // 90 degrees west
-    [startCenter.lng, startCenter.lat] // Back to starting point
-  ];
+  const panSpeed = 0.1; // Adjust speed as needed
+  let currentLng = startCenter.lng;
+  let startTime = null;
 
-  let index = 0;
+  function panAroundGlobe(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = timestamp - startTime;
 
-  function panToNextCoordinate() {
-    if (index < panCoordinates.length) {
-      map.flyTo({
-        center: panCoordinates[index],
+    currentLng += panSpeed;
+    if (currentLng >= startCenter.lng + 360) {
+      map.easeTo({
+        center: [startCenter.lng, startCenter.lat],
         zoom: 2,
         speed: 2, // Adjust speed as needed
         curve: 1,
@@ -397,14 +396,22 @@ document.getElementById('pan-button').addEventListener('click', () => {
         },
         essential: true
       });
-
-      index++;
-      if (index < panCoordinates.length) {
-        setTimeout(panToNextCoordinate, .01); // Adjust delay as needed
-      }
+      return; // Stop after one full rotation
     }
+
+    map.easeTo({
+      center: [currentLng, startCenter.lat],
+      zoom: 2,
+      speed: 2, // Adjust speed as needed
+      curve: 1,
+      easing(t) {
+        return t;
+      },
+      essential: true
+    });
+
+    requestAnimationFrame(panAroundGlobe);
   }
 
-  panToNextCoordinate();
+  requestAnimationFrame(panAroundGlobe);
 });
-
