@@ -355,13 +355,13 @@ map.on('mouseleave', 'clusters-circle-id', (event) => {
 
 map.on('load', () => {
 	settings.mapSettings.categories.forEach(category => {
-		var legendEntry = Object.assign(document.createElement('div'), { 
+		var legendEntry = Object.assign(.createElement('div'), { 
 			innerHTML: `<span style="background-color:${(category.color)}"></span>${(category.label)}`,
 			className: 'legend-entry' 
 		});
 		categoryContainer.appendChild(legendEntry);
 	})
-	categoryContainer.appendChild(Object.assign(document.createElement('div'), { 
+	categoryContainer.appendChild(Object.assign(.createElement('div'), { 
 			innerHTML: `<span style="background-color: hsl(42, 0%, 60%)"></span>Other`,
 			className: 'legend-entry' 
 		}));
@@ -370,4 +370,36 @@ map.on('load', () => {
 map.on('move', () => { 
 	checkContinent();
 });
+//Button
 
+document.getElementById('pan-button').addEventListener('click', () => {
+        const panCoordinates = [
+          [0, 0], // Starting point
+          [90, 0], // East
+          [180, 0], // Opposite side of the globe
+          [-90, 0], // West
+          [0, 0] // Back to starting point
+        ];
+
+        let index = 0;
+
+        function panToNextCoordinate() {
+          if (index < panCoordinates.length) {
+            map.flyTo({
+              center: panCoordinates[index],
+              zoom: 2,
+              speed: 0.5, // Adjust speed as needed
+              curve: 1,
+              easing(t) {
+                return t;
+              },
+              essential: true
+            });
+
+            index++;
+            setTimeout(panToNextCoordinate, 5000); // Adjust delay as needed
+          }
+        }
+
+        panToNextCoordinate();
+      });
