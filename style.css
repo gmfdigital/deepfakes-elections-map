@@ -268,36 +268,6 @@ a:hover{
   width: 11px;
 }
 
-/*****************************/
-/*********** Pan Around **********/
-
-.search-container {
-    position: relative;
-}
-
-#search {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-}
-
-#panButton {
-    position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    cursor: pointer;
-}
-
-#panButton:hover {
-    background: #1e88e5;
-}
 
 /*****************************/
 /*********** POPUP ***********/
