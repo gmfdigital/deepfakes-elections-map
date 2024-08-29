@@ -3,17 +3,17 @@ var settings = {
 		"categories": [
 			{
 				"categoryField": "Audio Deepfake",
-				"label": "Audio Deepfake",
+				"label": "Altered Audio",
 				"color": "hsl(223, 83%, 54%)"
 			},
 			{
 				"categoryField": "Visual Deepfake",
-				"label": "Visual Deepfake",
+				"label": "Altered Image",
 				"color": "hsl(298, 85%, 57%)"
 			},
 			{
 				"categoryField": "Video Deepfake",
-				"label": "Video Deepfake",
+				"label": "Altered Videoe",
 				"color": "hsl(0, 58%, 56%)"
 			},
 			{
