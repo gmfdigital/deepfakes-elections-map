@@ -13,7 +13,7 @@ var settings = {
 			},
 			{
 				"categoryField": "Video Deepfake",
-				"label": "Altered Videoe",
+				"label": "Altered Video",
 				"color": "hsl(0, 58%, 56%)"
 			},
 			{
