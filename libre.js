@@ -374,33 +374,37 @@ map.on('move', () => {
 
 
 document.getElementById('pan-button').addEventListener('click', () => {
-        const panCoordinates = [
-          [0, 0], // Starting point
-          [90, 0], // East
-          [180, 0], // Opposite side of the globe
-          [-90, 0], // West
-          [0, 0] // Back to starting point
-        ];
+  const startCenter = map.getCenter();
+  const panCoordinates = [
+    [startCenter.lng, startCenter.lat], // Starting point
+    [startCenter.lng + 90, startCenter.lat], // 90 degrees east
+    [startCenter.lng + 180, startCenter.lat], // 180 degrees opposite
+    [startCenter.lng - 90, startCenter.lat], // 90 degrees west
+    [startCenter.lng, startCenter.lat] // Back to starting point
+  ];
 
-        let index = 0;
+  let index = 0;
 
-        function panToNextCoordinate() {
-          if (index < panCoordinates.length) {
-            map.flyTo({
-              center: panCoordinates[index],
-              zoom: 2,
-              speed: 0.5, // Adjust speed as needed
-              curve: 1,
-              easing(t) {
-                return t;
-              },
-              essential: true
-            });
-
-            index++;
-            setTimeout(panToNextCoordinate, 0.01); // Adjust delay as needed
-          }
-        }
-
-        panToNextCoordinate();
+  function panToNextCoordinate() {
+    if (index < panCoordinates.length) {
+      map.flyTo({
+        center: panCoordinates[index],
+        zoom: 2,
+        speed: 0.5, // Adjust speed as needed
+        curve: 1,
+        easing(t) {
+          return t;
+        },
+        essential: true
       });
+
+      index++;
+      if (index < panCoordinates.length) {
+        setTimeout(panToNextCoordinate, 5000); // Adjust delay as needed
+      }
+    }
+  }
+
+  panToNextCoordinate();
+});
+
