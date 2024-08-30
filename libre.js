@@ -34,17 +34,17 @@ function toggleClass(elementToAdd, elementToRemove, classToToggle) {
 	elementToRemove.classList.remove(classToToggle); 
 }
 
-//function checkContinent() {
-	//const {lng, lat} = map.getCenter();
-	//if (lng > -30) { 
-		//toggleClass(europeToggle, unitedStatesToggle, "active");
-		//toggleClass(europeToggle, unitedStatesToggle, "clicked")	
-	//} 
-	//if (lng < -30) { 
-		//toggleClass(unitedStatesToggle, europeToggle, "active");
-		//toggleClass(unitedStatesToggle, europeToggle, "clicked")	 
-	//} 
-//} 
+function checkContinent() {
+	const {lng, lat} = map.getCenter();
+	if (lng > -30) { 
+		toggleClass(europeToggle, unitedStatesToggle, "active");
+		toggleClass(europeToggle, unitedStatesToggle, "clicked")	
+	} 
+	if (lng < -30) { 
+		toggleClass(unitedStatesToggle, europeToggle, "active");
+		toggleClass(unitedStatesToggle, europeToggle, "clicked")	 
+	} 
+} 
 
 
 function peekDirection() { //works
