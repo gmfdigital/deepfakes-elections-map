@@ -27,7 +27,7 @@ europeToggle.addEventListener("click", function(){
 	});
 	map.once('moveend', () => { map.changingContinent = false; });
 });
-europeToggle.addEventListener("mouseover", peekDirection);*/
+europeToggle.addEventListener("mouseover", peekDirection);
 
 function toggleClass(elementToAdd, elementToRemove, classToToggle) {
 	elementToAdd.classList.add(classToToggle);
