@@ -10,22 +10,22 @@ map.changingContinent = false;
 unitedStatesToggle.addEventListener("click", function(){
 	toggleClass(unitedStatesToggle, europeToggle, "clicked");
 	fullPopup('clear', 'clear');
-	map.once('movestart', () => { map.changingContinent = true; });
-	map.fitBounds(USAbbox, {
-		padding: {top: 50, bottom:20, left: 5, right: 5}
-	});
-	map.once('moveend', () => { map.changingContinent = false; });
+	//map.once('movestart', () => { map.changingContinent = true; });
+	//map.fitBounds(USAbbox, {
+		//padding: {top: 50, bottom:20, left: 5, right: 5}
+	//});
+	//map.once('moveend', () => { map.changingContinent = false; });
 });
 unitedStatesToggle.addEventListener("mouseover", peekDirection);
 
 europeToggle.addEventListener("click", function(){ 
 	toggleClass(europeToggle, unitedStatesToggle, "clicked");
 	fullPopup('clear', 'clear');
-	map.once('movestart', () => { map.changingContinent = true; });
-	map.fitBounds(EUbbox, {
-		padding: {top: 50, bottom:20, left: 5, right: 5}
-	});
-	map.once('moveend', () => { map.changingContinent = false; });
+	//map.once('movestart', () => { map.changingContinent = true; });
+	//map.fitBounds(EUbbox, {
+		//padding: {top: 50, bottom:20, left: 5, right: 5}
+	//});
+	//map.once('moveend', () => { map.changingContinent = false; });
 });
 europeToggle.addEventListener("mouseover", peekDirection);
 
