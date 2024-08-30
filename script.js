@@ -4,7 +4,7 @@ var europeToggle = document.querySelector("#europe");
 var USAbbox = [[-125, 51], [-68,20 ]];
 var EUbbox = [[-12, 61], [44,30 ]];
 var legend = document.querySelector(".legend");
-var categoryContainer = document.querySelector(".category-container");
+var categoryContainer = document.querySelector(".category-container"); 
 map.changingContinent = false; 
 
 unitedStatesToggle.addEventListener("click", function(){
