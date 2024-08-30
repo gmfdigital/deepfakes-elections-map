@@ -391,14 +391,23 @@ map.on('move', () => {
 });
 
 //Button 2
+let isPanning = false;
 
 document.getElementById('pan-button').addEventListener('click', () => {
+  if (isPanning) {
+    isPanning = false; // Stop panning if already panning
+    return;
+  }
+
+  isPanning = true; // Start panning
   const startCenter = map.getCenter();
   const panSpeed = 0.1; // Adjust speed as needed
   let currentLng = startCenter.lng;
   let startTime = null;
 
   function panAroundGlobe(timestamp) {
+    if (!isPanning) return; // Stop panning if flag is false
+
     if (!startTime) startTime = timestamp;
     const progress = timestamp - startTime;
 
@@ -414,7 +423,8 @@ document.getElementById('pan-button').addEventListener('click', () => {
         },
         essential: true
       });
-      return; // Stop after one full rotation
+      isPanning = false; // Stop after one full rotation
+      return;
     }
 
     map.easeTo({
@@ -433,4 +443,3 @@ document.getElementById('pan-button').addEventListener('click', () => {
 
   requestAnimationFrame(panAroundGlobe);
 });
-
