@@ -403,7 +403,7 @@ document.getElementById('pan-button').addEventListener('click', () => {
     const progress = timestamp - startTime;
 
     currentLng += panSpeed;
-    if (currentLng >= startCenter.lng + 360) {
+    if (currentLng >= startCenter.lng + 180) {
       map.easeTo({
         center: [startCenter.lng, startCenter.lat],
         zoom: 2,
