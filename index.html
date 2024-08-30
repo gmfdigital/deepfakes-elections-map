@@ -88,14 +88,11 @@
 
   map.on('load', () => {
 
-    		//map.fitBounds(EUbbox, {
-				//padding: {top: 50, bottom:20, left: 5, right: 5}
-				//});
+    		map.fitBounds(EUbbox, {
+				padding: {top: 50, bottom:20, left: 5, right: 5}
+				});
 
-  		// checkContinent(); 
-
-	  // Set an initial view for the map
-    map.setView([0, 0], 2); // Center the map at [0, 0] with zoom level 2
+  		 checkContinent(); 
 
 
 			map.addSource('semiconductors', {
