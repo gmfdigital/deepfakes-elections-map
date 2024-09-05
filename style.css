@@ -35,7 +35,7 @@ font-face {
     --theme-grey: rgb(128 128 128);
    /* --header-font: "Roslindale Variable", "Adobe Garamond Pro", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
     --theme-sans-serif:  "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif; */
-  --header-font: "Radio Canada Bold", "Radio Canada", "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif;
+  --header-font: "Radio Canada", "Radio Canada Bold", "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif;
     --theme-sans-serif:  "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif;
 }
 
@@ -197,7 +197,7 @@ h1 {
   line-height: 1;
   margin-bottom: 0.3em; 
   font-family: var(--header-font);
-  font-size: clamp(40px, 6vmin, 60px);
+  font-size: clamp(40px, 6vmin, 55px);
   color: var(--theme-blue);
 }
 
