@@ -361,6 +361,21 @@ var stylesheet = {
                 ]
             }
         },
+        //Trying to fill
+        {
+  "id": "country-boundaries",
+  "type": "fill",
+  "source": "composite",
+  "source-layer": "country_boundaries",
+  "paint": {
+    "fill-color": [
+      "case",
+      ["boolean", ["feature-state", "hasData"], false],
+      "#5C9EA6", // Color for countries with datapoints
+      "hsl(20, 8%, 92%)"  // Default color for other countries
+    ]
+  }
+},
         {
             "id": "water",
             "type": "fill",
