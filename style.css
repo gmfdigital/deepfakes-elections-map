@@ -8,17 +8,22 @@
 }*/
 
 @font-face {
-  src: url('fonts/RoslindaleVariable-VF[DisplayCondensed]-Testing.woff2') format("woff2"),
+  src: url('fonts/fonts/webfonts/RadioCanada-Bold.woff2') format("woff2"),
+    url('fonts/fonts/webfonts/RadioCanada-Bold.woff2') format("woff");
+  /*src: url('fonts/RoslindaleVariable-VF[DisplayCondensed]-Testing.woff2') format("woff2"),
        url('fonts/RoslindaleVariable-VF[DisplayCondensed]-Testing.woff') format("woff");
-  font-family: 'Roslindale Variable';
+  font-family: 'Roslindale Variable';*/
+  font-family: 'Radio Canada Bold';
   font-style: normal;
   font-weight: bold;
 }
 
 font-face {
-  src: url('fonts/Roslindale-DisplayCondensedRegular-Testing.woff2') format("woff2"),
-       url('fonts/Roslindale-DisplayCondensedRegular-Testing.woff') format("woff");
-  font-family: 'Roslindale';
+  src: url('fonts/fonts/webfonts/RadioCanadaCondensed-Bold.woff2') format("woff2"),
+       url('fonts/fonts/webfonts/RadioCanadaCondensed-Bold.woff2') format("woff");
+ /* src: url('fonts/Roslindale-DisplayCondensedRegular-Testing.woff2') format("woff2"),
+       url('fonts/Roslindale-DisplayCondensedRegular-Testing.woff') format("woff");*/
+  font-family: 'Radio Canada';
   font-style: normal;
   font-weight: normal;
 }
@@ -28,7 +33,9 @@ font-face {
     --theme-blue: rgb(23 60 79);
     --theme-beige: rgb(247 240 233);
     --theme-grey: rgb(128 128 128);
-    --header-font: "Roslindale Variable", "Adobe Garamond Pro", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+   /* --header-font: "Roslindale Variable", "Adobe Garamond Pro", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    --theme-sans-serif:  "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif; */
+  --header-font: "Radio Canada Bold", "Radio Canada", "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif;
     --theme-sans-serif:  "Open Sans", "Arial Unicode MS Bold", "Helvetica", sans-serif;
 }
 
