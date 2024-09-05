@@ -7,7 +7,7 @@ var stylesheet = {
         "mapbox:sdk-support": {
             "android": "10.9.0",
             "ios": "10.9.0",
-            "js": "2.11.1"
+            "js": "2.11.1" 
         },
         "mapbox:autocomposite": true,
         "mapbox:groups": {
