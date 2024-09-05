@@ -1,6 +1,6 @@
 var stylesheet = {
     "version": 8,
-    "name": "GMF - Deepfakes in Global Elections Map",
+    "name": "Spitting Images: Tracking Deepfakes and Generative AI in Elections",
     "metadata": {
         "mapbox:type": "default",
         "mapbox:origin": "monochrome-dark-v1",
