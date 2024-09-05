@@ -3,23 +3,18 @@ var settings = {
 		"categories": [
 			{
 				"categoryField": "Audio Deepfake",
-				"label": "Altered Audio",
+				"label": "Generative AI Audio",
 				"color": "hsl(223, 83%, 54%)"
 			},
 			{
 				"categoryField": "Visual Deepfake",
-				"label": "Altered Image",
+				"label": "Generative AI Image",
 				"color": "hsl(298, 85%, 57%)"
 			},
 			{
 				"categoryField": "Video Deepfake",
-				"label": "Altered Video",
+				"label": "Generative AI Video",
 				"color": "hsl(0, 58%, 56%)"
-			},
-			{
-				"categoryField": "Generative Text",
-				"label": "Generative Text",
-				"color": "hsl(170, 97%, 40%)"
 			}
 		]
 	}
