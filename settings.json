@@ -16,6 +16,11 @@ var settings = {
 				"label": "Generative AI Video",
 				"color": "hsl(0, 58%, 56%)"
 			}
+			{
+				"categoryField": "Mixed Types",
+				"label": "Generative AI Mixed Media Types",
+				"color": "hsl(52, 100%, 55%)"
+			}
 		]
 	}
 }
