@@ -15,7 +15,7 @@ var settings = {
 				"categoryField": "Video Deepfake",
 				"label": "Generative AI Video",
 				"color": "hsl(0, 58%, 56%)"
-			}
+			},
 			{
 				"categoryField": "Mixed Types",
 				"label": "Generative AI Mixed Media Types",
